@@ -13,7 +13,6 @@ import { InformesPage } from './Pages/InformesPage'
 function App() {
   return (
     <>
-    <h1>Callao lacra</h1>
       <ThemeProvider>
         <LoginProvider>
           <MenuAppBar/>
