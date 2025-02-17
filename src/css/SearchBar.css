@@ -1,0 +1,151 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #222; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo del campo de entrada */
+.search-input {
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search-input input {
+    border-radius: 100px;
+    background-color: #333; /* Fondo oscuro para combinar */
+    color: #fff; /* Texto blanco */
+    font-family: 'Courier New', Courier, monospace;
+    height: 30px;
+    width: 220px;
+    outline: none;
+    border: none;
+    transition: all .5s;
+}
+
+.search-input input:focus {
+    background: #444; /* Fondo un poco más claro en foco */
+    box-shadow: inset 5px 5px 17px #222, inset -5px -5px 17px #555;
+}
+
+.search-container.dark .search-input input {
+    box-shadow: 5px 5px 17px #000, -5px -5px 17px #222;
+}
+
+.search-container.dark .search-input input:focus {
+    background: #333;
+    box-shadow: inset 5px 5px 17px #000, inset -5px -5px 17px #222;
+}
+
+/* Estilo del botón de búsqueda */
+.search-input button {
+    background-color: inherit; /* Azul vibrante */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer;
+    margin-left: 5px; /* Espacio entre el input y el botón */
+    margin-right: 10px; /* Espacio entre el input y el botón */
+    transition: all 0.3s ease;
+}
+
+.search-input button:hover {
+    background-color: #1c7ed6; /* Más oscuro en hover */
+}
+
+.search-input button:active {
+    background-color: #145a8d;
+    transform: translateY(5px);
+    transition: 200ms;
+}
+
+/* Estilo del popup de resultados */
+#popup {
+    position: absolute;
+    top: 60px;
+    width: 56.5%;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #333; /* Fondo oscuro */
+    z-index: 1000;
+    color: #fff; /* Texto blanco */
+}
+
+.search-container.dark .hit-container {
+    background-color: #444;
+}
+
+.search-container.dark .ais-Hits-item p {
+    color: #aaa;
+}
+
+.search-container.dark .ais-Hits-item h6 {
+    color: #ccc;
+}
+
+.results-popup .hit-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+}
+
+.search-container.dark input {
+    background-color: #333;
+    color: white;
+}
+
+#popup ul {
+    list-style: none;
+}
+
+.ais-Hits-item {
+    border-bottom: solid #555 1px;
+}
+
+.ais-Hits-list {
+    margin: 0;
+    padding: 0;
+}
+
+.hit-image {
+    width: 70px;
+    height: 95px;
+    margin-right: 10px;
+}
+
+.hit-info h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #fff;
+}
+
+.hit-info p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #bbb;
+}
+
+.hit-info h6 {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Responsivo */
+@media (max-width: 988px) {
+    .ais-SearchBox-reset {
+        display: none;
+    }
+}
+
+@media (min-width: 988px) {
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration {
+        display: none;
+    }
+}
